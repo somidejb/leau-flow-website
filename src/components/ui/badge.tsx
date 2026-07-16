@@ -7,10 +7,11 @@ export const badgeVariants = cva(
   {
     variants: {
       variant: {
-        copper: "bg-copper-light/60 text-copper-dark",
-        ink: "bg-ink text-paper",
-        outline: "border border-ink/20 text-ink/80",
-        "outline-light": "border border-paper/30 text-paper",
+        brass: "bg-brass-light/50 text-brass-dark",
+        water: "bg-water-light/30 text-water-dark",
+        deep: "bg-deep text-mist",
+        outline: "border border-deep/20 text-deep/80",
+        "outline-light": "border border-mist/30 text-mist",
       },
     },
     defaultVariants: {

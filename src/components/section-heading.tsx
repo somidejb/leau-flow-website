@@ -5,14 +5,14 @@ export function SectionHeading({
   title,
   description,
   align = "left",
-  tone = "ink",
+  tone = "deep",
   className,
 }: {
   eyebrow?: string;
   title: string;
   description?: string;
   align?: "left" | "center";
-  tone?: "ink" | "paper";
+  tone?: "deep" | "mist";
   className?: string;
 }) {
   return (
@@ -27,7 +27,7 @@ export function SectionHeading({
         <p
           className={cn(
             "mb-3 flex items-center gap-2 text-xs font-semibold tracking-[0.2em] uppercase",
-            tone === "ink" ? "text-copper-dark" : "text-copper-light",
+            tone === "deep" ? "text-brass-dark" : "text-brass-light",
             align === "center" && "justify-center"
           )}
         >
@@ -37,14 +37,14 @@ export function SectionHeading({
       )}
       <h2
         className={cn(
-          "text-balance font-serif text-3xl leading-[1.15] font-semibold sm:text-4xl",
-          tone === "ink" ? "text-ink" : "text-paper"
+          "text-balance font-display text-3xl leading-[1.15] font-semibold sm:text-4xl",
+          tone === "deep" ? "text-deep" : "text-mist"
         )}
       >
         {title}
       </h2>
       {description && (
-        <p className={cn("mt-4 text-base leading-relaxed", tone === "ink" ? "text-slate" : "text-paper/70")}>
+        <p className={cn("mt-4 text-base leading-relaxed", tone === "deep" ? "text-slate" : "text-mist/70")}>
           {description}
         </p>
       )}

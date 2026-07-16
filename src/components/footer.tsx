@@ -9,17 +9,17 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="mt-24 bg-ink text-paper/85">
-      <FlowLineDivider tone="paper" className="opacity-60" />
+    <footer className="mt-24 bg-deep text-mist/85">
+      <FlowLineDivider tone="mist" className="opacity-60" />
       <div className="container-page grid gap-10 py-14 md:grid-cols-4">
         <div className="md:col-span-1">
-          <Logo tone="paper" />
-          <p className="mt-4 max-w-xs text-sm leading-relaxed text-paper/60">{business.description}</p>
+          <Logo tone="mist" />
+          <p className="mt-4 max-w-xs text-sm leading-relaxed text-mist/60">{business.description}</p>
           <div className="mt-5 flex gap-3">
             <a
               href={business.social.facebook}
               aria-label="L'Eau Flow on Facebook"
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-paper/20 text-paper/70 transition-colors hover:border-paper/50 hover:text-paper"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-mist/20 text-mist/70 transition-colors hover:border-mist/50 hover:text-mist"
             >
               <FacebookIcon className="h-4 w-4" />
             </a>
@@ -27,11 +27,11 @@ export function Footer() {
         </div>
 
         <div>
-          <h3 className="text-xs font-semibold tracking-widest text-copper-light uppercase">Company</h3>
+          <h3 className="text-xs font-semibold tracking-widest text-water-light uppercase">Company</h3>
           <ul className="mt-4 space-y-2.5 text-sm">
             {primaryNav.map((link) => (
               <li key={link.href}>
-                <a href={link.href} className="text-paper/70 transition-colors hover:text-paper">
+                <a href={link.href} className="text-mist/70 transition-colors hover:text-mist">
                   {link.label}
                 </a>
               </li>
@@ -40,12 +40,12 @@ export function Footer() {
         </div>
 
         <div>
-          <h3 className="text-xs font-semibold tracking-widest text-copper-light uppercase">Service Areas</h3>
+          <h3 className="text-xs font-semibold tracking-widest text-water-light uppercase">Service Areas</h3>
           <ul className="mt-4 space-y-2.5 text-sm">
             {serviceAreas.map((area) => (
               <li key={area.slug}>
                 {/* eslint-disable-next-line @next/next/no-html-link-for-pages -- same-page hash anchor, needs native scroll */}
-                <a href="/#areas" className="text-paper/70 transition-colors hover:text-paper">
+                <a href="/#areas" className="text-mist/70 transition-colors hover:text-mist">
                   {area.name}
                 </a>
               </li>
@@ -54,36 +54,36 @@ export function Footer() {
         </div>
 
         <div>
-          <h3 className="text-xs font-semibold tracking-widest text-copper-light uppercase">Get In Touch</h3>
-          <ul className="mt-4 space-y-3 text-sm text-paper/70">
+          <h3 className="text-xs font-semibold tracking-widest text-water-light uppercase">Get In Touch</h3>
+          <ul className="mt-4 space-y-3 text-sm text-mist/70">
             <li className="flex items-start gap-2.5">
-              <Phone className="mt-0.5 h-4 w-4 shrink-0 text-copper" aria-hidden="true" />
-              <a href={business.phoneHref} className="hover:text-paper">{business.phone}</a>
+              <Phone className="mt-0.5 h-4 w-4 shrink-0 text-brass-light" aria-hidden="true" />
+              <a href={business.phoneHref} className="hover:text-mist">{business.phone}</a>
             </li>
             <li className="flex items-start gap-2.5">
-              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-copper" aria-hidden="true" />
+              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brass-light" aria-hidden="true" />
               <span>{business.address}</span>
             </li>
             <li className="flex items-start gap-2.5">
-              <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-copper" aria-hidden="true" />
+              <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-brass-light" aria-hidden="true" />
               <span>Red Seal certified &amp; {business.licensing.liabilityInsurance.toLowerCase()}</span>
             </li>
             <li className="flex items-start gap-2.5">
-              <Star className="mt-0.5 h-4 w-4 shrink-0 text-copper" aria-hidden="true" />
+              <Star className="mt-0.5 h-4 w-4 shrink-0 text-brass-light" aria-hidden="true" />
               <span>{business.warranty.headline}</span>
             </li>
           </ul>
         </div>
       </div>
 
-      <div className="border-t border-paper/10 py-6">
-        <div className="container-page flex flex-col items-center justify-between gap-3 text-xs text-paper/50 sm:flex-row">
+      <div className="border-t border-mist/10 py-6">
+        <div className="container-page flex flex-col items-center justify-between gap-3 text-xs text-mist/50 sm:flex-row">
           <p>
             © {year} {business.legalName}. All rights reserved.
           </p>
           <div className="flex gap-5">
-            <Link href="/privacy" className="hover:text-paper/80">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-paper/80">Terms of Service</Link>
+            <Link href="/privacy" className="hover:text-mist/80">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-mist/80">Terms of Service</Link>
           </div>
         </div>
       </div>

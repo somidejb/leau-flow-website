@@ -1,8 +1,8 @@
 import { JsonLd } from "@/components/json-ld";
 import { Hero } from "@/components/sections/home/hero";
-import { PositioningStatement } from "@/components/sections/home/positioning-statement";
+import { ProofBand } from "@/components/sections/home/proof-band";
 import { ServicesSection } from "@/components/sections/home/services-section";
-import { TestimonialsBand } from "@/components/sections/home/testimonials-band";
+import { ValleyBanner } from "@/components/sections/home/valley-banner";
 import { AreasSection } from "@/components/sections/home/areas-section";
 import { AboutSection } from "@/components/sections/home/about-section";
 import { FaqSection } from "@/components/sections/home/faq-section";
@@ -31,9 +31,9 @@ export default function Home() {
         }}
       />
       <Hero />
-      <PositioningStatement />
+      <ProofBand />
       <ServicesSection />
-      <TestimonialsBand />
+      <ValleyBanner />
       <AreasSection />
       <AboutSection />
       <FaqSection />

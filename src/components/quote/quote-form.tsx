@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, CheckCircle2, Loader2, Phone } from "lucide-react";
 import { quoteFormSchema, quoteStepFields, type QuoteFormValues } from "@/lib/quote-schema";
 import { Button, buttonVariants } from "@/components/ui/button";
@@ -21,6 +22,23 @@ const nextSteps = [
   "David calls or texts you back to confirm scope and, if needed, book a free on-site estimate.",
   "You get a fixed price in writing before anything is scheduled.",
 ];
+
+/** Ripple rings that expand outward once, echoing a drop hitting water. */
+function SuccessRipple() {
+  return (
+    <span className="pointer-events-none absolute inset-0 flex items-center justify-center" aria-hidden="true">
+      {[0, 0.25, 0.5].map((delay) => (
+        <motion.span
+          key={delay}
+          className="absolute h-14 w-14 rounded-full border border-water"
+          initial={{ scale: 0.6, opacity: 0.6 }}
+          animate={{ scale: 2.6, opacity: 0 }}
+          transition={{ duration: 1.4, delay, ease: "easeOut" }}
+        />
+      ))}
+    </span>
+  );
+}
 
 export function QuoteForm() {
   const [step, setStep] = useState(0);
@@ -85,10 +103,17 @@ export function QuoteForm() {
   if (submitted) {
     return (
       <div className="py-6 text-center">
-        <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-moss/15">
-          <CheckCircle2 className="h-7 w-7 text-moss" aria-hidden="true" />
+        <span className="relative mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-moss/15">
+          <SuccessRipple />
+          <motion.span
+            initial={{ scale: 0.6, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <CheckCircle2 className="h-7 w-7 text-moss" aria-hidden="true" />
+          </motion.span>
         </span>
-        <h3 className="mt-6 font-serif text-2xl font-semibold text-ink">
+        <h3 className="mt-6 font-display text-2xl font-semibold text-deep">
           Got it — we&apos;ll be in touch shortly.
         </h3>
         <p className="mt-3 text-slate">Here&apos;s what happens from here:</p>
@@ -96,7 +121,7 @@ export function QuoteForm() {
         <ol className="mt-6 space-y-3 text-left">
           {nextSteps.map((stepText, index) => (
             <li key={stepText} className="flex items-start gap-3 rounded-sm border border-border p-4">
-              <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-copper/40 font-mono text-xs text-copper-dark">
+              <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-brass/40 font-mono text-xs text-brass-dark">
                 {index + 1}
               </span>
               <span className="text-sm text-slate">{stepText}</span>
@@ -134,7 +159,7 @@ export function QuoteForm() {
         </div>
 
         {submitError && (
-          <p className="mt-4 text-sm text-rust" role="alert">
+          <p className="mt-4 text-sm text-alert" role="alert">
             {submitError}
           </p>
         )}

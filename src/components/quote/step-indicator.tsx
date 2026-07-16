@@ -13,9 +13,9 @@ export function StepIndicator({ current }: { current: number }) {
             <span
               className={cn(
                 "flex h-7 w-7 shrink-0 items-center justify-center rounded-full border text-xs font-semibold",
-                state === "done" && "border-copper bg-copper text-paper",
-                state === "current" && "border-copper text-copper-dark",
-                state === "upcoming" && "border-ink/20 text-ink/40"
+                state === "done" && "border-brass bg-brass text-deep",
+                state === "current" && "border-brass text-brass-dark",
+                state === "upcoming" && "border-deep/20 text-deep/40"
               )}
               aria-current={state === "current" ? "step" : undefined}
             >
@@ -24,13 +24,13 @@ export function StepIndicator({ current }: { current: number }) {
             <span
               className={cn(
                 "hidden text-sm font-medium sm:block",
-                state === "upcoming" ? "text-ink/40" : "text-ink"
+                state === "upcoming" ? "text-deep/40" : "text-deep"
               )}
             >
               {label}
             </span>
             {index < steps.length - 1 && (
-              <span className={cn("h-px flex-1", state === "done" ? "bg-copper" : "bg-ink/15")} aria-hidden="true" />
+              <span className={cn("h-px flex-1", state === "done" ? "bg-brass" : "bg-deep/15")} aria-hidden="true" />
             )}
           </li>
         );

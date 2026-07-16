@@ -21,9 +21,9 @@ function PipeElbowMark({ className }: { className?: string }) {
   );
 }
 
-export function Logo({ className, tone = "ink" }: { className?: string; tone?: "ink" | "paper" }) {
-  const textColor = tone === "ink" ? "text-ink" : "text-paper";
-  const taglineColor = tone === "ink" ? "text-ink/70" : "text-paper/70";
+export function Logo({ className, tone = "deep" }: { className?: string; tone?: "deep" | "mist" }) {
+  const textColor = tone === "deep" ? "text-deep" : "text-mist";
+  const taglineColor = tone === "deep" ? "text-deep/70" : "text-mist/70";
 
   return (
     <span className={cn("inline-flex items-center gap-2", className)}>

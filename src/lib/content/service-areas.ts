@@ -5,8 +5,7 @@ export const serviceAreas: ServiceArea[] = [
     slug: "duncan",
     name: "Duncan",
     region: "Home base — City of Totems",
-    blurb:
-      "Our home base. Downtown Duncan's older homes mean galvanized and copper supply lines are still common alongside newer builds heading up toward Mount Tzouhalem.",
+    blurb: "Our home base.",
     responseTime: "Same-day for most calls booked before 1 PM",
     neighborhoods: ["Downtown Duncan", "Drinkwater", "Tzouhalem", "Quamichan Lake"],
     hero: {
@@ -19,8 +18,7 @@ export const serviceAreas: ServiceArea[] = [
     slug: "north-cowichan",
     name: "North Cowichan",
     region: "Coastal municipality around Duncan",
-    blurb:
-      "A spread-out municipality of coastal communities from Crofton to Maple Bay — a lot of these properties run on private wells or older municipal lines.",
+    blurb: "Coastal communities, private wells.",
     responseTime: "Same-day to next-day, depending on call volume",
     neighborhoods: ["Maple Bay", "Crofton", "South End", "Averill Creek"],
     hero: {
@@ -33,8 +31,7 @@ export const serviceAreas: ServiceArea[] = [
     slug: "lake-cowichan",
     name: "Lake Cowichan",
     region: "West of Duncan",
-    blurb:
-      "Cabins and full-time homes around the lake — many running on well water and septic systems that need plumbing built for that setup, not a city grid.",
+    blurb: "Cabins, well water, septic systems.",
     responseTime: "Next-day for most calls",
     neighborhoods: ["Youbou", "Honeymoon Bay", "Downtown Lake Cowichan"],
     hero: {
@@ -47,8 +44,7 @@ export const serviceAreas: ServiceArea[] = [
     slug: "chemainus",
     name: "Chemainus",
     region: "South of Duncan",
-    blurb:
-      "Known for its murals and its mix of older village homes downtown alongside newer development up the hill.",
+    blurb: "Murals and heritage homes.",
     responseTime: "Same-day to next-day, depending on call volume",
     neighborhoods: ["Chemainus Village", "Waterwheel Park area", "Chemainus Road corridor"],
     hero: {
@@ -61,8 +57,7 @@ export const serviceAreas: ServiceArea[] = [
     slug: "ladysmith",
     name: "Ladysmith",
     region: "North of Duncan",
-    blurb:
-      "A harbour town on the 49th parallel with a downtown core of older character homes near the water.",
+    blurb: "Harbour town, 49th parallel.",
     responseTime: "Next-day for most calls",
     neighborhoods: ["Downtown Ladysmith", "Transfer Beach area", "49th Parallel area"],
     hero: {

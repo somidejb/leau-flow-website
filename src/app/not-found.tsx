@@ -15,15 +15,15 @@ export default function NotFound() {
     <section className="flex min-h-[70vh] items-center py-20">
       <div className="container-page max-w-lg text-center">
         <svg viewBox="0 0 200 80" className="mx-auto h-16 w-40" aria-hidden="true">
-          <path d="M0,40 L80,40 L110,40" fill="none" stroke="var(--copper)" strokeOpacity={0.5} strokeWidth={2} />
-          <rect x="108" y="30" width="10" height="20" fill="none" stroke="var(--copper)" strokeWidth={2} />
-          <circle cx="150" cy="40" r="3" fill="var(--ink)" fillOpacity={0.3} />
-          <circle cx="165" cy="40" r="3" fill="var(--ink)" fillOpacity={0.2} />
-          <circle cx="180" cy="40" r="3" fill="var(--ink)" fillOpacity={0.1} />
+          <path d="M0,40 L80,40 L110,40" fill="none" stroke="var(--water)" strokeOpacity={0.5} strokeWidth={2} />
+          <rect x="108" y="30" width="10" height="20" fill="none" stroke="var(--water)" strokeWidth={2} />
+          <circle cx="150" cy="40" r="3" fill="var(--deep)" fillOpacity={0.3} />
+          <circle cx="165" cy="40" r="3" fill="var(--deep)" fillOpacity={0.2} />
+          <circle cx="180" cy="40" r="3" fill="var(--deep)" fillOpacity={0.1} />
         </svg>
 
-        <p className="mt-6 font-mono text-sm tracking-widest text-copper-dark">404</p>
-        <h1 className="mt-2 font-serif text-3xl font-semibold text-ink sm:text-4xl">
+        <p className="mt-6 font-mono text-sm tracking-widest text-brass-dark">404</p>
+        <h1 className="mt-2 font-display text-3xl font-semibold text-deep sm:text-4xl">
           This line dead-ends here.
         </h1>
         <p className="mt-4 text-slate">
@@ -43,9 +43,9 @@ export default function NotFound() {
 
         {/* eslint-disable @next/next/no-html-link-for-pages -- same-page hash anchors, need native scroll */}
         <div className="mt-10 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
-          <a href="/#services" className="text-copper-dark hover:underline">Services</a>
-          <a href="/#areas" className="text-copper-dark hover:underline">Service Areas</a>
-          <a href="/#quote" className="text-copper-dark hover:underline">Request a Quote</a>
+          <a href="/#services" className="text-brass-dark hover:underline">Services</a>
+          <a href="/#areas" className="text-brass-dark hover:underline">Service Areas</a>
+          <a href="/#quote" className="text-brass-dark hover:underline">Request a Quote</a>
         </div>
         {/* eslint-enable @next/next/no-html-link-for-pages */}
       </div>

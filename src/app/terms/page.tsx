@@ -13,7 +13,7 @@ export default function TermsPage() {
       <PageHeader eyebrow="Legal" title="Terms of Service" />
       <section className="py-16 sm:py-20">
         <div className="container-page max-w-2xl space-y-8 text-slate">
-          <p className="rounded-sm border border-copper/30 bg-copper-light/10 p-4 text-sm text-ink">
+          <p className="rounded-sm border border-brass/30 bg-brass-light/10 p-4 text-sm text-deep">
             TEMPLATE NOTE: placeholder terms for a Canadian home-service
             contractor — not legal advice. Have a lawyer review before
             publishing, particularly the warranty, cancellation, and
@@ -21,7 +21,7 @@ export default function TermsPage() {
           </p>
 
           <div>
-            <h2 className="font-serif text-xl font-semibold text-ink">Estimates &amp; pricing</h2>
+            <h2 className="font-display text-xl font-semibold text-deep">Estimates &amp; pricing</h2>
             <p className="mt-3 leading-relaxed">
               Written estimates are valid for 30 days from the date issued.
               Prices are fixed once work begins, except where the scope
@@ -34,7 +34,7 @@ export default function TermsPage() {
           </div>
 
           <div>
-            <h2 className="font-serif text-xl font-semibold text-ink">Scheduling &amp; cancellation</h2>
+            <h2 className="font-display text-xl font-semibold text-deep">Scheduling &amp; cancellation</h2>
             <p className="mt-3 leading-relaxed">
               We ask for at least 24 hours&apos; notice to reschedule or cancel
               a booked appointment. Repeated late cancellations may be subject
@@ -43,7 +43,7 @@ export default function TermsPage() {
           </div>
 
           <div>
-            <h2 className="font-serif text-xl font-semibold text-ink">Workmanship warranty</h2>
+            <h2 className="font-display text-xl font-semibold text-deep">Workmanship warranty</h2>
             <p className="mt-3 leading-relaxed">{business.warranty.detail}</p>
             <p className="mt-3 leading-relaxed">
               This warranty covers labor performed by {business.name} and does
@@ -55,7 +55,7 @@ export default function TermsPage() {
           </div>
 
           <div>
-            <h2 className="font-serif text-xl font-semibold text-ink">Payment</h2>
+            <h2 className="font-display text-xl font-semibold text-deep">Payment</h2>
             <p className="mt-3 leading-relaxed">
               Payment is due on completion of work unless otherwise agreed in
               writing.
@@ -63,7 +63,7 @@ export default function TermsPage() {
           </div>
 
           <div>
-            <h2 className="font-serif text-xl font-semibold text-ink">Limitation of liability</h2>
+            <h2 className="font-display text-xl font-semibold text-deep">Limitation of liability</h2>
             <p className="mt-3 leading-relaxed">
               TEMPLATE NOTE: insert jurisdiction-appropriate limitation of
               liability language here in consultation with a lawyer and your
@@ -72,7 +72,7 @@ export default function TermsPage() {
           </div>
 
           <div>
-            <h2 className="font-serif text-xl font-semibold text-ink">Contact</h2>
+            <h2 className="font-display text-xl font-semibold text-deep">Contact</h2>
             <p className="mt-3 leading-relaxed">
               Questions about these terms can be sent to {business.email} or{" "}
               {business.phone}.

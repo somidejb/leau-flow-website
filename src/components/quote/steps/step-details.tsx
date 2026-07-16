@@ -33,17 +33,17 @@ export function StepDetails({
 
   return (
     <fieldset className="space-y-6">
-      <legend className="font-serif text-xl font-semibold text-ink sm:text-2xl">
+      <legend className="font-display text-xl font-semibold text-deep sm:text-2xl">
         Tell us a bit more
       </legend>
 
       <div>
-        <label htmlFor="serviceArea" className="mb-1.5 block text-sm font-medium text-ink">
+        <label htmlFor="serviceArea" className="mb-1.5 block text-sm font-medium text-deep">
           Service area
         </label>
         <select
           id="serviceArea"
-          className="h-12 w-full rounded-sm border border-border bg-paper px-3 text-ink focus:border-copper focus:ring-1 focus:ring-copper focus:outline-none"
+          className="h-12 w-full rounded-sm border border-border bg-mist px-3 text-deep focus:border-brass focus:ring-1 focus:ring-brass focus:outline-none"
           {...register("serviceArea")}
           defaultValue=""
         >
@@ -57,45 +57,45 @@ export function StepDetails({
           ))}
         </select>
         {errors.serviceArea && (
-          <p className="mt-1.5 text-sm text-rust" role="alert">
+          <p className="mt-1.5 text-sm text-alert" role="alert">
             {errors.serviceArea.message}
           </p>
         )}
       </div>
 
       <div>
-        <label htmlFor="description" className="mb-1.5 block text-sm font-medium text-ink">
+        <label htmlFor="description" className="mb-1.5 block text-sm font-medium text-deep">
           What&apos;s the problem or project?
         </label>
         <textarea
           id="description"
           rows={4}
           placeholder="E.g. Kitchen sink has been draining slower each week and now smells."
-          className="w-full rounded-sm border border-border bg-paper px-3 py-2.5 text-ink placeholder:text-slate/50 focus:border-copper focus:ring-1 focus:ring-copper focus:outline-none"
+          className="w-full rounded-sm border border-border bg-mist px-3 py-2.5 text-deep placeholder:text-slate/50 focus:border-brass focus:ring-1 focus:ring-brass focus:outline-none"
           {...register("description")}
         />
         {errors.description && (
-          <p className="mt-1.5 text-sm text-rust" role="alert">
+          <p className="mt-1.5 text-sm text-alert" role="alert">
             {errors.description.message}
           </p>
         )}
       </div>
 
       <div>
-        <label htmlFor="address" className="mb-1.5 block text-sm font-medium text-ink">
+        <label htmlFor="address" className="mb-1.5 block text-sm font-medium text-deep">
           Address <span className="font-normal text-slate">(optional)</span>
         </label>
         <input
           id="address"
           type="text"
           placeholder="Street address, so we can plan the visit"
-          className="h-12 w-full rounded-sm border border-border bg-paper px-3 text-ink placeholder:text-slate/50 focus:border-copper focus:ring-1 focus:ring-copper focus:outline-none"
+          className="h-12 w-full rounded-sm border border-border bg-mist px-3 text-deep placeholder:text-slate/50 focus:border-brass focus:ring-1 focus:ring-brass focus:outline-none"
           {...register("address")}
         />
       </div>
 
       <div>
-        <span className="mb-1.5 block text-sm font-medium text-ink">
+        <span className="mb-1.5 block text-sm font-medium text-deep">
           Photos <span className="font-normal text-slate">(optional, up to 6)</span>
         </span>
         <p className="mb-2 text-xs text-slate">
@@ -113,7 +113,7 @@ export function StepDetails({
               <button
                 type="button"
                 onClick={() => removePhoto(index)}
-                className="absolute top-1 right-1 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full bg-ink/80 text-paper"
+                className="absolute top-1 right-1 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full bg-deep/80 text-mist"
                 aria-label={`Remove photo ${index + 1}`}
               >
                 <X className="h-3 w-3" />
@@ -124,7 +124,7 @@ export function StepDetails({
             <button
               type="button"
               onClick={() => fileInputRef.current?.click()}
-              className="flex h-20 w-20 cursor-pointer flex-col items-center justify-center gap-1 rounded-sm border border-dashed border-ink/25 text-ink/50 hover:border-copper hover:text-copper-dark"
+              className="flex h-20 w-20 cursor-pointer flex-col items-center justify-center gap-1 rounded-sm border border-dashed border-deep/25 text-deep/50 hover:border-brass hover:text-brass-dark"
             >
               <ImagePlus className="h-5 w-5" aria-hidden="true" />
               <span className="text-[0.65rem]">Add photo</span>

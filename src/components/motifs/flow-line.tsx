@@ -8,12 +8,12 @@ import { cn } from "@/lib/utils";
  */
 export function FlowLineDivider({
   className,
-  tone = "copper",
+  tone = "water",
 }: {
   className?: string;
-  tone?: "copper" | "paper";
+  tone?: "water" | "brass" | "mist";
 }) {
-  const stroke = tone === "copper" ? "var(--copper)" : "var(--paper)";
+  const stroke = tone === "water" ? "var(--water)" : tone === "brass" ? "var(--brass)" : "var(--mist)";
   return (
     <svg
       viewBox="0 0 1200 80"

@@ -21,7 +21,7 @@ export function Navbar() {
 
   return (
     <header className="sticky top-4 z-40 px-4 sm:top-5 sm:px-6">
-      <div className="container-page flex items-center justify-between rounded-full border border-ink/10 bg-paper/90 px-4 py-2.5 shadow-sm backdrop-blur-md sm:px-5">
+      <div className="container-page flex items-center justify-between rounded-full border border-deep/10 bg-mist/90 px-4 py-2.5 shadow-sm backdrop-blur-md sm:px-5">
         <Link href="/" className="shrink-0" aria-label={`${business.name} home`}>
           <Logo />
         </Link>
@@ -31,7 +31,7 @@ export function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-ink/75 transition-colors hover:text-ink"
+              className="text-sm font-medium text-deep/75 transition-colors hover:text-deep"
             >
               {link.label}
             </a>
@@ -39,8 +39,8 @@ export function Navbar() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <a href={business.phoneHref} className="flex items-center gap-1.5 text-sm font-semibold text-ink">
-            <Phone className="h-4 w-4 text-copper" aria-hidden="true" />
+          <a href={business.phoneHref} className="flex items-center gap-1.5 text-sm font-semibold text-deep">
+            <Phone className="h-4 w-4 text-water" aria-hidden="true" />
             {business.phone}
           </a>
           {/* Plain <a>, not <Link>: Next's client router doesn't scroll to same-page hash anchors. */}
@@ -53,7 +53,7 @@ export function Navbar() {
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full text-ink lg:hidden"
+          className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full text-deep lg:hidden"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
         >
@@ -71,7 +71,7 @@ export function Navbar() {
             className="container-page mt-2 lg:hidden"
           >
             <nav
-              className="flex flex-col gap-1 rounded-2xl border border-ink/10 bg-paper p-4 shadow-lg"
+              className="flex flex-col gap-1 rounded-2xl border border-deep/10 bg-mist p-4 shadow-lg"
               aria-label="Mobile"
             >
               {primaryNav.map((link) => (
@@ -79,12 +79,12 @@ export function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="rounded-lg px-3 py-2.5 text-base font-medium text-ink hover:bg-ink/5"
+                  className="rounded-lg px-3 py-2.5 text-base font-medium text-deep hover:bg-deep/5"
                 >
                   {link.label}
                 </a>
               ))}
-              <div className="mt-2 flex flex-col gap-2 border-t border-ink/10 pt-3">
+              <div className="mt-2 flex flex-col gap-2 border-t border-deep/10 pt-3">
                 <a href={business.phoneHref} className={cn(buttonVariants({ variant: "outline" }))}>
                   <Phone className="h-4 w-4" aria-hidden="true" />
                   {business.phone}

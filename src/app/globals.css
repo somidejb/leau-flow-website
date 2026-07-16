@@ -1,34 +1,40 @@
 @import "tailwindcss";
 
 :root {
-  --paper: #f7f2e9;
-  --paper-2: #efe6d3;
-  --ink: #101a26;
-  --ink-2: #1c2b3d;
-  --slate: #5b6472;
-  --border: #e1d6bf;
-  --copper: #b4652f;
-  --copper-dark: #8f4d22;
-  --copper-light: #e4c9a8;
-  --rust: #a63b2a;
+  --mist: #eff3f1;
+  --mist-2: #e2eae7;
+  --deep: #0b1a1f;
+  --deep-2: #142a30;
+  --slate: #52646a;
+  --border: #d6e0dc;
+  --brass: #b8863a;
+  --brass-dark: #8a5f1e;
+  --brass-light: #e3c483;
+  --water: #0e7c86;
+  --water-dark: #0a5a62;
+  --water-light: #8fd6db;
+  --alert: #ad3d2c;
   --moss: #3f6b4c;
 }
 
 @theme inline {
-  --color-paper: var(--paper);
-  --color-paper-2: var(--paper-2);
-  --color-ink: var(--ink);
-  --color-ink-2: var(--ink-2);
+  --color-mist: var(--mist);
+  --color-mist-2: var(--mist-2);
+  --color-deep: var(--deep);
+  --color-deep-2: var(--deep-2);
   --color-slate: var(--slate);
   --color-border: var(--border);
-  --color-copper: var(--copper);
-  --color-copper-dark: var(--copper-dark);
-  --color-copper-light: var(--copper-light);
-  --color-rust: var(--rust);
+  --color-brass: var(--brass);
+  --color-brass-dark: var(--brass-dark);
+  --color-brass-light: var(--brass-light);
+  --color-water: var(--water);
+  --color-water-dark: var(--water-dark);
+  --color-water-light: var(--water-light);
+  --color-alert: var(--alert);
   --color-moss: var(--moss);
 
-  --font-serif: var(--font-newsreader);
-  --font-sans: var(--font-public-sans);
+  --font-display: var(--font-space-grotesk);
+  --font-sans: var(--font-inter);
   --font-mono: var(--font-mono-technical);
 }
 
@@ -41,16 +47,17 @@ section[id] {
 }
 
 body {
-  background: var(--paper);
-  color: var(--ink);
-  font-family: var(--font-public-sans), system-ui, sans-serif;
+  background: var(--mist);
+  color: var(--deep);
+  font-family: var(--font-inter), system-ui, sans-serif;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: var(--font-newsreader), Georgia, serif;
+  font-family: var(--font-space-grotesk), system-ui, sans-serif;
+  letter-spacing: -0.01em;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -80,7 +87,41 @@ h4 {
   text-wrap: balance;
 }
 
+/* Faint contour-line texture, echoing the Cowichan Valley watershed the
+   business serves and reinforcing the "flow" motif at low opacity. */
+.bg-contours {
+  background-image: repeating-radial-gradient(
+    circle at 15% 20%,
+    transparent 0,
+    transparent 38px,
+    rgba(14, 124, 134, 0.05) 39px,
+    rgba(14, 124, 134, 0.05) 40px
+  );
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+}
+
+@keyframes dial-sweep {
+  from {
+    stroke-dashoffset: var(--dial-offset-start, 251);
+  }
+  to {
+    stroke-dashoffset: var(--dial-offset-end, 0);
+  }
+}
+
 ::selection {
-  background: var(--copper);
-  color: var(--paper);
+  background: var(--brass);
+  color: var(--mist);
 }

@@ -9,11 +9,11 @@ export const team: TeamMember[] = [
     id: "david-oneill-fortier",
     name: "David O'Neill-Fortier",
     role: "Owner",
-    bio: "Runs L'Eau Flow Plumbing & Heating out of Duncan, serving Cowichan Valley homeowners with Red Seal certified plumbing and SkillTradesBC certified gas work.",
+    bio: "Red Seal certified plumbing and SkillTradesBC certified gas work for the Cowichan Valley.",
     credentials: ["Red Seal Certified Plumber", "SkillTradesBC Gas Certified", "Insured"],
     photo: {
       kind: "placeholder",
-      caption: "Photo of David O'Neill-Fortier — replace with a real photo before launch",
+      caption: "Photo",
       aspect: "portrait",
     },
   },

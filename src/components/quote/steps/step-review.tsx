@@ -27,7 +27,7 @@ export function StepReview({ photoCount }: { photoCount: number }) {
   return (
     <div className="space-y-8">
       <div>
-        <h2 className="font-serif text-xl font-semibold text-ink sm:text-2xl">Review your request</h2>
+        <h2 className="font-display text-xl font-semibold text-deep sm:text-2xl">Review your request</h2>
         <dl className="mt-4 divide-y divide-border rounded-sm border border-border">
           {[
             ["Project type", projectType?.label],
@@ -43,14 +43,14 @@ export function StepReview({ photoCount }: { photoCount: number }) {
           ].map(([label, value]) => (
             <div key={label} className="grid grid-cols-3 gap-4 px-4 py-3 text-sm">
               <dt className="text-slate">{label}</dt>
-              <dd className="col-span-2 text-ink">{value}</dd>
+              <dd className="col-span-2 text-deep">{value}</dd>
             </div>
           ))}
         </dl>
       </div>
 
-      <div className="rounded-sm bg-paper-2 p-5">
-        <h3 className="text-xs font-semibold tracking-widest text-copper-dark uppercase">What happens next</h3>
+      <div className="rounded-sm bg-mist-2 p-5">
+        <h3 className="text-xs font-semibold tracking-widest text-brass-dark uppercase">What happens next</h3>
         <ul className="mt-3 space-y-2.5">
           {nextSteps.map((step) => (
             <li key={step} className="flex items-start gap-2.5 text-sm text-slate">

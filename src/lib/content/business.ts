@@ -1,5 +1,3 @@
-import type { Certification } from "./types";
-
 // REAL BUSINESS: L'Eau Flow Plumbing & Heating, Duncan, BC (Cowichan Valley,
 // Vancouver Island). Sourced from the company's Facebook page and BBB profile
 // (listed there as "L'Eau Flow Plumbing & Gas"). Only verified facts are
@@ -45,25 +43,6 @@ export const business = {
     yearsInBusiness: 7,
   },
   social: {
-    // TODO: paste the exact Facebook page URL the user shared (screenshot only, link not captured in text).
-    facebook: "https://www.facebook.com/",
+    facebook: "https://www.facebook.com/leauflow/",
   },
 } as const;
-
-export const certifications: Certification[] = [
-  {
-    name: "Red Seal Certified Plumber",
-    issuer: "Interprovincial Standards Program",
-    description: "David holds Red Seal certification, recognized across Canada.",
-  },
-  {
-    name: "SkillTradesBC Gas Certification",
-    issuer: "SkillTradesBC",
-    description: "Certified to install and alter several gas systems.",
-  },
-  {
-    name: "BBB Accredited Business",
-    issuer: "Better Business Bureau",
-    description: "A+ rating, accredited business.",
-  },
-];

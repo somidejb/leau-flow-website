@@ -21,7 +21,7 @@ export function FlowLineDraw({ className }: { className?: string }) {
       <motion.path
         d="M0,160 L120,160 L160,120 L340,120 L380,160 L560,160 L600,80 L780,80 L820,40 L900,40"
         fill="none"
-        stroke="var(--copper)"
+        stroke="var(--water-light)"
         strokeWidth={2}
         strokeLinecap="round"
         initial={prefersReducedMotion ? undefined : { pathLength: 0, opacity: 0 }}
@@ -39,7 +39,7 @@ export function FlowLineDraw({ className }: { className?: string }) {
           cx={cx}
           cy={cy}
           r={5}
-          fill="var(--copper)"
+          fill="var(--brass-light)"
           initial={prefersReducedMotion ? undefined : { opacity: 0, scale: 0 }}
           animate={prefersReducedMotion ? undefined : { opacity: 1, scale: 1 }}
           transition={{ duration: 0.4, delay: 1.2 + i * 0.15 }}

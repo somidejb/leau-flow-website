@@ -68,12 +68,6 @@ export interface FaqItem {
   category: "general" | "pricing" | "scheduling" | "service";
 }
 
-export interface Certification {
-  name: string;
-  issuer: string;
-  description: string;
-}
-
 export interface NavLink {
   label: string;
   href: string;
